@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Landing Page</title>
+    <!-- Use the Inter font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Load Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7fafc;
+        }
+        .gradient-bg {
+            background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .btn-primary {
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-800">
+                John Doe
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="text-gray-600 hover:text-indigo-600 transition-colors duration-200">About Me</a>
+                <a href="#work" class="text-gray-600 hover:text-indigo-600 transition-colors duration-200">My Work</a>
+                <a href="#contact" class="text-gray-600 hover:text-indigo-600 transition-colors duration-200">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu (initially hidden) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+            <a href="#about" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">About Me</a>
+            <a href="#work" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">My Work</a>
+            <a href="#contact" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="gradient-bg text-white py-20 md:py-32">
+            <div class="container mx-auto text-center px-6">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight mb-4">
+                    Hello, I'm John Doe
+                </h1>
+                <p class="text-xl md:text-2xl font-light mb-8 max-w-2xl mx-auto">
+                    A passionate developer, designer, and writer dedicated to creating beautiful and functional things.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank" class="inline-block px-8 py-4 font-semibold text-lg bg-white text-indigo-600 rounded-full shadow-lg btn-primary hover:bg-gray-100">
+                        View My LinkedIn
+                    </a>
+                    <a href="your_cv.pdf" target="_blank" class="inline-block px-8 py-4 font-semibold text-lg border border-white text-white rounded-full btn-primary hover:bg-white hover:text-indigo-600">
+                        Download My CV
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+                <div class="w-full md:w-1/2 flex justify-center">
+                    <img src="https://placehold.co/400x400/764ba2/FFFFFF?text=Your+Photo" alt="Your Photo" class="rounded-full shadow-lg w-48 h-48 md:w-64 md:h-64 object-cover">
+                </div>
+                <div class="w-full md:w-1/2 text-center md:text-left">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
+                    <p class="text-gray-600 mb-6">
+                        I am a full-stack developer with a passion for creating elegant solutions to complex problems. With over 5 years of experience in web development, I have worked on projects ranging from small business websites to large-scale enterprise applications. My goal is to leverage my skills to build impactful products that improve people's lives. When I'm not coding, you can find me hiking or reading a good book.
+                    </p>
+                    <a href="#contact" class="inline-block px-6 py-3 font-semibold text-white bg-indigo-600 rounded-full shadow-md btn-primary hover:bg-indigo-700">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- My Work Section -->
+        <section id="work" class="py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">My Work & Projects</h2>
+                <p class="text-gray-600 mb-12 max-w-2xl mx-auto">
+                    A few highlights from my portfolio. Click on the cards to learn more!
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project 1 -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                        <img src="https://placehold.co/600x400/667eea/FFFFFF?text=Project+1" alt="Project 1" class="rounded-md mb-4">
+                        <h3 class="text-xl font-bold mb-2">Portfolio Website</h3>
+                        <p class="text-gray-500">
+                            A responsive website built with modern JavaScript frameworks.
+                        </p>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                        <img src="https://placehold.co/600x400/764ba2/FFFFFF?text=Project+2" alt="Project 2" class="rounded-md mb-4">
+                        <h3 class="text-xl font-bold mb-2">E-commerce Platform</h3>
+                        <p class="text-gray-500">
+                            Scalable e-commerce solution with integrated payment systems.
+                        </p>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                        <img src="https://placehold.co/600x400/667eea/FFFFFF?text=Project+3" alt="Project 3" class="rounded-md mb-4">
+                        <h3 class="text-xl font-bold mb-2">Mobile Application</h3>
+                        <p class="text-gray-500">
+                            A cross-platform mobile app for tracking daily habits.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA/Contact Section -->
+        <section id="contact" class="gradient-bg text-white py-16">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Let's Connect</h2>
+                <p class="text-lg mb-8 max-w-2xl mx-auto">
+                    Feel free to reach out to me via email or connect with me on LinkedIn.
+                </p>
+                <a href="mailto:youremail@example.com" class="inline-block px-8 py-3 font-semibold text-indigo-600 bg-white rounded-full shadow-lg btn-primary hover:bg-gray-100">
+                    Send Me an Email
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center md:text-left">
+            <div class="border-t border-gray-700 pt-4 text-center text-gray-500 text-sm">
+                &copy; 2023 John Doe. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
